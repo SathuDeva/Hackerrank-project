@@ -1,0 +1,101 @@
+.imageScroll {
+  background: rgb(135, 135, 206);
+  border-radius: 6px;
+  color: black;
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  /* text-align: left; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* header, section, aside, footer {
+  margin: 0 1.5% 24px 1.5%;
+} */
+section {
+  float: left;
+  width: 40%;
+}
+aside {
+  float: right;
+  width: 40%;
+}
+footer {
+  clear: both;
+  margin-bottom: 20px;
+  margin-top: 200px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.but {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin:auto auto;
+}
+
+
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(83, 98, 133);
+  color: black;
+  font-size: 16px;
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 5px #666;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn:active {
+  background-color: black;
+  box-shadow: 0 2px #666;
+}
+
+/* .prev-btn {
+  float: left;
+} */
+
+.next-btn {
+  float: right;
+}
+
+button.modal-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(201, 27, 27);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px #999;
+  font-family: 'Times New Roman';
+}
+
+button.modal-btn:hover {
+  background-color: rgb(201, 27, 27);
+}
+
+button.modal-btn:active {
+  background-color: rgb(201, 27, 27);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

@@ -1,0 +1,180 @@
+
+  <div class="row my-2">
+      <div class="col-lg-8 order-lg-2">
+
+          <div class="tab-content py-4">
+              <div class="tab-pane active" id="profile">
+                  <h5 class="mb-3">Pet Profile</h5>
+                  <mat-card class="example-card" *ngIf="petdetails">
+                      <mat-card-header>
+                        <mat-card-title>{{petdetails[0].name}}</mat-card-title>
+                        <mat-card-subtitle>{{petdetails[0].about}}</mat-card-subtitle>
+                      </mat-card-header>
+                      <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/hackathon-404f0.appspot.com/o/dogs%2Fgolden-retriever-puppy.jpg?alt=media&token=06dc6cf9-aa51-41ca-8c94-8136ee7c6b9a">
+                      <mat-card-content>
+                          <h6>Seeking For:</h6>
+
+                             <h4>{{petdetails[0].seekingfor}}</h4>
+
+                      </mat-card-content>
+
+                      <div class="col-md-12">
+                          <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> Recent Activity</h5>
+                          <table class="table table-sm table-hover table-striped">
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          <h4>{{petdetails[0].status}}</h4>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <strong></strong> Groomed hair at <strong>`star saloon`</strong>
+                                      </td>
+
+                              </tbody>
+                          </table>
+                          <button (click)='fix()'>Fix Date</button>
+                          <tr>
+                          <input type="checkbox">Make available<br></tr>
+                      </div>
+
+                    </mat-card>
+                    <br>
+
+                    <mat-card class="example-card" *ngIf="pet2details">
+                        <mat-card-header>
+
+                          <mat-card-title>{{pet2details[0].name}}</mat-card-title>
+                          <mat-card-subtitle>{{pet2details[0].about}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/hackathon-404f0.appspot.com/o/dogs%2Favatar.jpg?alt=media&token=d4fe7099-e857-4253-b18b-82beaaa3331d" alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+
+                            <h6><strong>Seeking For:</strong></h6>
+
+                               <h4>{{pet2details[0].seekingfor}}</h4>
+
+                        </mat-card-content>
+
+                        <div class="col-md-12">
+                            <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> Recent Activity</h5>
+                            <table class="table table-sm table-hover table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h4>{{pet2details[0].status}}</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong></strong> Groomed hair at <strong>`Osma saloon`</strong>
+                                        </td>
+
+                                </tbody>
+                            </table>
+                            <button (click)='fix()'>Fix Date</button>
+                        </div>
+
+                      </mat-card>
+
+                  </div>
+                  <!--/row-->
+              </div>
+
+          </div>
+
+
+      <div class="col-lg-4 order-lg-1 text-center" >
+
+          <label class="custom-file">
+              <input type="file" id="file" class="custom-file-input">
+              <mat-card class="example-card1">
+
+                  <img mat-card-image src= "{{ownerdetails[0].url}}" alt="Photo of a Shiba Inu">
+                  <mat-card-content>
+
+
+                  </mat-card-content>
+                  <h6><strong>
+                    <span class="custom-file-control">{{ownerdetails[0].name}}</span></strong></h6>
+
+                    <h6><strong>
+                    <span class="custom-file-control">{{ownerdetails[0].bio}}</span></strong></h6>
+
+                    <h6><strong>
+                    <span class="custom-file-control">{{ownerdetails[0].address}}</span></strong></h6>
+
+                    <h6><strong>
+                    <span class="custom-file-control">{{ownerdetails[0].phonenumber}}</span></strong></h6>
+                      <button (click)='show()'>Add Pet</button>
+
+                </mat-card>
+
+          </label>
+      </div>
+
+
+      <div class="col-lg-4 order-lg-1 text-center" *ngIf="d">
+
+          <label class="custom-file">
+              <input type="file" id="file" class="custom-file-input">
+
+
+
+                  <mat-card-content>
+                      <div class="container">
+                      <div class="text-center border border-light p-5">
+
+                              <p class="h4 mb-4">Add Pet</p>
+
+                              <div class="form-row mb-4">
+                                <div class="col">
+                                  <!-- First name -->
+                                  <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Name" #name>
+                                </div>
+                                <div class="col">
+                                  <!-- Last name -->
+                                  <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Breed" #about>
+                                </div>
+                              </div>
+                              <div class="col">
+                                  <!-- First name -->
+                                  <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Height" #height>
+                                </div>
+                                <div class="col">
+                                  <!-- Last name -->
+                                  <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Weight" #weight>
+                                </div>
+                              </div>
+
+                              <!-- E-mail -->
+                              <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Seeking For" #seekingfor>
+
+                              <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Status" #status>
+
+                              <!-- Password -->
+
+                              <!-- Phone number -->
+
+                              <!-- Newsletter -->
+
+
+                              <!-- Sign up button -->
+                              <button mdbBtn color="info" block="true" class="my-4" type="submit" (click)='getpet(name.value,about.value,seekingfor.value,status.value,height.value,weight.value)'>Add Pet</button>
+
+                              <!-- Social register -->
+
+                                </div>
+
+
+                  </mat-card-content>
+
+
+
+          </label>
+
+      </div>
+      </div>
+
+

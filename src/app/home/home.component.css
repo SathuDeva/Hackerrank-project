@@ -1,0 +1,33 @@
+img.avatar {
+  width: 70%;
+
+}
+
+.example-card {
+  width: 350px;
+}
+.example-card1 {
+  width: 250px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+#left
+{
+  float: left;
+  width: 40%;
+
+}
+
+#right
+{
+  float: right;
+  width: 60%;
+}
+.container{
+  padding: 20px;
+  width:400px;
+  color: #4b4fe2
+}

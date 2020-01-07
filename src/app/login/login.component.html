@@ -1,0 +1,45 @@
+<!-- Default form login -->
+<div class=back>
+
+<div class="text-center border border-light p-5">
+
+    <div class="container">
+    <img src="assets/img/user.png" alt="Avatar" class="avatar">
+
+
+    <p class="h4 mb-4">Login</p>
+
+    <!-- Email -->
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" #email>
+
+    <!-- Password -->
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" #password>
+
+    <div class="d-flex justify-content-around">
+      <div>
+        <!-- Remember me -->
+        <mdb-checkbox [default]="true">Remember me</mdb-checkbox>
+      </div>
+      <div>
+        <!-- Forgot password -->
+        <a href="/home">Forgot password?</a>
+      </div>
+    </div>
+
+    <!-- Sign in button -->
+
+    <button mdbBtn color="success" block="true" class="my-4" type="submit" (click)='onlogin(email.value,password.value)' > Login</button>
+
+    <!-- Register -->
+    <p>Not a member?
+      <a href="/signup">Register</a>
+    </p>
+
+    <!-- Social login -->
+
+    </div>
+  </div>
+  <!-- Default form login -->
+</div>
+
+  <router-outlet></router-outlet>
